@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Source+Code+Pro:ital,wght@1,300&family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif !important;
+    text-decoration: none;
+}
+
+.fa-solid::before,
+.fa-regular::before,
+.fa-brand::before {
+    font-family: 'Font Awesome 5 Free';
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    width: 143px;
+}
+
+d-block {
+    display: block !important;
+}
+
+d-none {
+    display: none !important;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 2%;
+    color: rgb(255, 255, 255);
+}
+
+#nav a {
+    color: #a4a4a4;
+}
+
+.sticky-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo-container img {
+    width: 85%;
+    max-width: 180px;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger-icon-container {
+    display: none;
+}
+
+.close-hamburger-icon-container {
+    display: none;
+}
+
+.hamburger-icon {
+    font-weight: 900;
+    margin-top: 5px;
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+.close-hamburger-icon {
+    font-weight: 900;
+    margin-top: 5px;
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+.nav-links {
+    display: block;
+}
+
+.menu-links {
+    padding-right: 130px;
+    display: flex;
+    gap: 10%;
+    white-space: nowrap;
+    margin-bottom: 6px;
+    color: #a4a4a4;
+}
+
+.menu-links a:hover {
+    color: #ffffff !important;
+}
+
+.active {
+    color: white !important;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 988px) {
+    .logo-container img {
+        max-width: 155px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+
+    #nav {
+
+        flex-direction: column;
+    }
+
+    .hamburger-icon-container {
+        display: block;
+    }
+
+    .close-hamburger-icon-container {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo-container {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .logo-container img {
+        position: absolute;
+        left: 1rem;
+    }
+
+    .menu-links {
+        flex-direction: column;
+        padding-right: 0;
+        margin-top: 7rem
+    }
+
+    .menu-links li {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+}

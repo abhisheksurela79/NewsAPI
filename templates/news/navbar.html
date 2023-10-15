@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="News API - Your gateway to real-time global news and headlines."
+    />
+    <link rel="icon" type="image/png" href="{% static "assets/favicon.png" %}">
+    <link rel="stylesheet" href="{% static "css/navbar.css" %}" />
+    {% if request.path == "/" %}<link rel="stylesheet" href="{% static "/css/docs.css" %}">{% endif %}
+    {% if request.path == "/about-me/" %}<link rel="stylesheet" href="{% static "/css/dev.css" %}">{% endif %}
+    <link rel="stylesheet" href="{% static "/css/footer.css" %}" />
+    
+    <title>
+      {% if request.path == "/" %}News API | Documentation{% else %}News API | About Me{% endif %}
+    </title>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="logo-container">
+        <a href="/"><img src="{% static "/assets/news-api-dark.png" %}" alt="site logo" draggable="false"/></a>
+
+        <div class="hamburger-icon-container">
+          <i class="fa-solid fa-bars hamburger-icon"></i>
+        </div>
+
+        <div class="close-hamburger-icon-container">
+          <i class="fa-solid fa-xmark close-hamburger-icon"></i>
+        </div>
+      </div>
+
+      <div>
+        <div class="nav-links">
+          <ul class="menu-links">
+            <li><a href="/" class="{% if request.path == "/" %}active{% endif %}">Docs</a></li>
+            <li><a href="/api" target="_blank">API</a></li>
+            <li><a class="{% if request.path == "/about-me/" %}active{% endif %}" href="/about-me">About Me</a></li>
+            <li><a href="https://github.com/abhisheksurela79" target="_blank">GitHub</a></li>
+            <li><a href="https://in.linkedin.com/in/abhisheksurela79" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    {% block body %}
+    {% endblock body %}
+
+
+    {% include "news/footer.html" %}
+
+    <script src="{% static "js/navbar.js" %}"></script>
+    {% if request.path == "/" %}<script src="{% static "js/docs.js" %}"></script>{% endif %}
+    <script src="https://kit.fontawesome.com/a13c8bedf2.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

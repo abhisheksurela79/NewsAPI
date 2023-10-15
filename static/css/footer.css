@@ -1,0 +1,15 @@
+footer {
+    background-color: rgb(29, 29, 29);
+    color: #ffffff;
+    height: 20vh;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 346px) {
+    footer {
+        font-size: 0.8rem;
+    }
+}

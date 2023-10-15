@@ -1,0 +1,338 @@
+{% extends "news/navbar.html" %}
+
+{% load static %}
+
+{% block body %}
+
+<section>
+    <div class="welcome-container">
+      <div class="welcome-text-container">
+        <p class="welcome-heading">Welcome to News API</p>
+        <p class="welcome-paragraph">
+          News API is a powerful and versatile tool that provides developers
+          and businesses with real-time access to a vast and constantly
+          updated database of news articles and headlines from around the
+          world. With easy-to-integrate features, it allows users to retrieve
+          the latest news, filter by source, category, or keyword, and stay
+          informed on global events effortlessly. Whether for creating news
+          apps, conducting research, or enhancing content, News API is your
+          gateway to a wealth of up-to-the-minute information.
+        </p>
+      </div>
+
+      <div class="welcome-image">
+        <img src="{% static "assets/Marketing-bro.svg" %}" alt="" draggable="false"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="api-description-section">
+    <p class="section-heading">API Description</p>
+    <p class="section-paragraph">
+      The News API provides access to news articles from around the world. It
+      supports a single endpoint <span>/api/</span> that accepts GET requests
+      with optional parameters.
+    </p>
+  </section>
+
+  <section class="parameters-section">
+    <p class="section-heading">Parameters</p>
+
+    <div class="parameters-section-table">
+      <div class="table-container">
+        <div class="category-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Country Code</th>
+                <th>Country Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ae</td>
+                <td>United Arab Emirates</td>
+              </tr>
+              <tr>
+                <td>ar</td>
+                <td>Argentina</td>
+              </tr>
+              <tr>
+                <td>au</td>
+                <td>Australia</td>
+              </tr>
+              <tr>
+                <td>be</td>
+                <td>Belgium</td>
+              </tr>
+              <tr>
+                <td>br</td>
+                <td>Brazil</td>
+              </tr>
+              <tr>
+                <td>ca</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>de</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>eg</td>
+                <td>Egypt</td>
+              </tr>
+              <tr>
+                <td>es</td>
+                <td>Spain</td>
+              </tr>
+              <tr>
+                <td>fr</td>
+                <td>France</td>
+              </tr>
+              <tr>
+                <td>gb</td>
+                <td>United Kingdom</td>
+              </tr>
+              <tr>
+                <td>id</td>
+                <td>Indonesia</td>
+              </tr>
+              <tr>
+                <td>in</td>
+                <td>India</td>
+              </tr>
+              <tr>
+                <td>it</td>
+                <td>Italy</td>
+              </tr>
+              <tr>
+                <td>jp</td>
+                <td>Japan</td>
+              </tr>
+              <tr>
+                <td>mx</td>
+                <td>Mexico</td>
+              </tr>
+              <tr>
+                <td>ng</td>
+                <td>Nigeria</td>
+              </tr>
+              <tr>
+                <td>ru</td>
+                <td>Russia</td>
+              </tr>
+              <tr>
+                <td>sa</td>
+                <td>Saudi Arabia</td>
+              </tr>
+              <tr>
+                <td>tr</td>
+                <td>Turkey</td>
+              </tr>
+              <tr>
+                <td>ua</td>
+                <td>Ukraine</td>
+              </tr>
+              <tr>
+                <td>us</td>
+                <td>United States</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="category-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>business</td>
+              </tr>
+              <tr>
+                <td>education</td>
+              </tr>
+              <tr>
+                <td>entertainment</td>
+              </tr>
+              <tr>
+                <td>health</td>
+              </tr>
+              <tr>
+                <td>science_and_technology</td>
+              </tr>
+              <tr>
+                <td>sport</td>
+              </tr>
+              <tr>
+                <td>travel</td>
+              </tr>
+              <tr>
+                <td>world</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-second">
+            <thead>
+              <tr>
+                <th>Page Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Number of articles to show on one page. <span class="text-monospace">(Integer value)</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table-second">
+            <thead>
+              <tr>
+                <th>Page</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Page number. <span class="text-monospace">(Integer value)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-heading" style="margin-top: 2rem; margin-bottom: 1rem">
+      Explore Global Categories, Page Size, and Pagination with Ease!
+    </p>
+
+    <div class="flex-container parameters-section-url">
+      <label><span class="domain-name"></span>/api/?country_code=</label>
+      <div class="country-dropdown-container">
+        <p class="country-button-dropdown">in</p>
+        <ul class="country-dropdown-menu">
+          <li class="country-dropdown-item" data-country-code="ar">
+            Argentina
+          </li>
+          <li class="country-dropdown-item" data-country-code="au">
+            Australia
+          </li>
+          <li class="country-dropdown-item" data-country-code="be">
+            Belgium
+          </li>
+          <li class="country-dropdown-item" data-country-code="br">Brazil</li>
+          <li class="country-dropdown-item" data-country-code="ca">Canada</li>
+          <li class="country-dropdown-item" data-country-code="eg">Egypt</li>
+          <li class="country-dropdown-item" data-country-code="fr">France</li>
+          <li class="country-dropdown-item" data-country-code="de">
+            Germany
+          </li>
+          <li class="country-dropdown-item" data-country-code="in">India</li>
+          <li class="country-dropdown-item" data-country-code="id">
+            Indonesia
+          </li>
+          <li class="country-dropdown-item" data-country-code="it">Italy</li>
+          <li class="country-dropdown-item" data-country-code="jp">Japan</li>
+          <li class="country-dropdown-item" data-country-code="mx">Mexico</li>
+          <li class="country-dropdown-item" data-country-code="ng">
+            Nigeria
+          </li>
+          <li class="country-dropdown-item" data-country-code="ru">Russia</li>
+          <li class="country-dropdown-item" data-country-code="sa">
+            Saudi Arabia
+          </li>
+          <li class="country-dropdown-item" data-country-code="es">Spain</li>
+          <li class="country-dropdown-item" data-country-code="tr">Turkey</li>
+          <li class="country-dropdown-item" data-country-code="ua">
+            Ukraine
+          </li>
+          <li class="country-dropdown-item" data-country-code="ae">
+            United Arab Emirates
+          </li>
+          <li class="country-dropdown-item" data-country-code="gb">
+            United Kingdom
+          </li>
+          <li class="country-dropdown-item" data-country-code="us">
+            United States
+          </li>
+        </ul>
+      </div>
+      &category=
+
+      <div class="category-dropdown-container">
+        <p class="category-button-dropdown">entertainment</p>
+        <ul class="category-dropdown-menu">
+          <li class="category-dropdown-item" data-category-code="world">
+            World
+          </li>
+          <li class="category-dropdown-item" data-category-code="sport">
+            Sports
+          </li>
+          <li class="category-dropdown-item" data-category-code="business">
+            Business
+          </li>
+          <li
+            class="category-dropdown-item"
+            data-category-code="science_and_technology"
+          >
+            Science & Technology
+          </li>
+          <li class="category-dropdown-item" data-category-code="education">
+            Education
+          </li>
+          <li
+            class="category-dropdown-item"
+            data-category-code="entertainment"
+          >
+            Entertainment
+          </li>
+          <li class="category-dropdown-item" data-category-code="health">
+            Health
+          </li>
+          <li class="category-dropdown-item" data-category-code="travel">
+            Travel
+          </li>
+        </ul>
+      </div>
+      &page_size=
+
+      <div class="page-size-container">
+        <p>10</p>
+        <input
+          min="1"
+          type="number"
+          placeholder="articles per page"
+          value="10"
+        />
+      </div>
+      &page=
+
+      <div class="page-number-container">
+        <p>1</p>
+        <input min="1" type="number" placeholder="page number" value="1" />
+      </div>
+    </div>
+  </section>
+
+  <section class="api-btn-response-section">
+    <button class="fetch-button">Submit</button>
+    <button class="open-fetch-response-button">Open link</button>
+  </section>
+
+  <section class="api-response-section">
+    <pre>
+      <code id="json-output"></code>
+    </pre>
+  </section>
+
+{% endblock body %}
+
+
+
+
+
+
+I have created an API alternative to NEWSAPI https://newsapi.org/, the limitation with https://newsapi.org/ is it's not free and free developer plain is limited to localhost that means you cannot use https://newsapi.org/ on production so i decided to create a alternative API to NEWSAPI with a similar name called NewsAPI this API is News API is a powerful and versatile tool that provides developers and businesses with real-time access to a vast and constantly updated database of news articles and headlines from around the world. With easy-to-integrate features, it allows users to retrieve the latest news, filter by source, category, or keyword, and stay informed on global events effortlessly. Whether for creating news apps, conducting research, or enhancing content, News API is your gateway to a wealth of up-to-the-minute information and that's all completely for free  

@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.dev-head {
+    display: flex;
+    align-items: center;
+    margin: 8rem 9rem 8rem 9rem;
+    gap: 13rem;
+}
+
+.dev-pic {
+    width: 50%;
+    max-width: 320px;
+    min-width: 176px;
+}
+
+.dev-head h2 {
+    font-family: 'SimSun', 'Nanum Myeongjo', serif !important;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    font-size: clamp(1rem, -0.875rem + 8.333vw, 3rem);
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+}
+
+.social-media-icons svg {
+    width: 2rem;
+    height: 47px;
+}
+
+.dev-content {
+    font-family: 'Poppins', sans-serif;
+    margin: 4rem 9rem;
+}
+
+.dev-content h3 {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.dev-content p {
+    margin: 1.5rem 0 1rem 0;
+    max-width: 58rem;
+}
+
+.dev-content-2 {
+    margin: 2.5rem 1px 1rem 144px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dev-content-2 > h3 {
+    font-weight: 400;
+}
+
+.dev-content-2 > p {
+    margin: 0.4rem 0 0.4rem 0;
+}
+
+.link {
+    font-size: 1rem;
+}
+
+
+
+/* Dev page */
+
+@media only screen and (max-width: 1263px) {
+    .dev-head h2 {
+        font-size: clamp(1rem, -0.875rem + 8.333vw, 2.5rem);
+    }
+
+    .social-media-icons svg {
+        width: 1.7rem;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .dev-head h2 {
+        font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+    }
+
+    .social-media-icons svg {
+        width: 1.5rem;
+    }
+
+    .dev-head {
+        gap: 10rem;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .dev-head h2 {
+        font-size: clamp(1rem, -0.875rem + 8.333vw, 1.5rem);
+    }
+
+    .social-media-icons svg {
+        width: 1.4rem;
+    }
+
+    .dev-head {
+        gap: 6rem;
+    }
+}
+
+@media only screen and (max-width: 744px) {
+    .dev-head {
+        gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 662px) {
+    .dev-head {
+        flex-direction: column;
+    }
+
+    .dev-content,  .dev-content-2 {
+        margin: 4rem 2rem;
+    }
+    
+}
