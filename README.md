@@ -4,7 +4,7 @@
 
 ## Live Documentation
 
-You can access live documentation of the application [here](http://newsapi.abhisheksurela.in). Additionally, you can check the live API by visiting this [link](http://newsapi.abhisheksurela.in/api/).
+You can access live documentation of the application [here](https://newsapi.abhisheksurela.in). Additionally, you can check the live API by visiting this [link](https://newsapi.abhisheksurela.in/api/).
 
 <p align="center">
   <a href="https://github.com/abhisheksurela79" target="_blank">
@@ -80,7 +80,7 @@ You can access NewsAPI using a single endpoint: `/api/`. It accepts GET requests
 
 Here are some example API requests:
 
-```http
+```https
 GET /api/?country_code=us&category=business&page_size=10&page=1
 GET /api/?category=health&page_size=5
 GET /api/?country_code=in&category=sport&page_size=15&page=2
